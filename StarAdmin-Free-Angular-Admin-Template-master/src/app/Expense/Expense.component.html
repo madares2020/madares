@@ -1,0 +1,137 @@
+<div class="row">
+  <div class="col-md-12 d-flex align-items-stretch grid-margin">
+    <div class="row flex-grow">
+
+      <div class="col-12 stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Post expense</h4>
+
+            <form class="forms-sample" (ngSubmit)="onSubmit()" #heroForm="ngForm">
+
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">school Fees</label>
+                  <div class="col-sm-9">
+                    <input type="number" class="form-control" id="schoolFees" required [(ngModel)]="expense.schoolFees"
+                      name="schoolFees">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">books Fees</label>
+                  <div class="col-sm-9">
+                    <input type="number" class="form-control" id="booksFees" required [(ngModel)]="expense.booksFees"
+                      name="booksFees">
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">uniform Fees</label>
+                  <div class="col-sm-9">
+                    <input type="number" class="form-control" id="uniformFees" required [(ngModel)]="expense.uniformFees"
+                      name="uniformFees">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">donation Fees</label>
+                  <div class="col-sm-9">
+                    <input type="number" class="form-control" id="donationFees" required [(ngModel)]="expense.donationFees"
+                      name="donationFees">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">aplication Fees</label>
+                  <div class="col-sm-9">
+                    <input type="number" class="form-control" id="aplicationFees" required [(ngModel)]="expense.aplicationFees"
+                      name="aplicationFees">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">bus Fees</label>
+                  <div class="col-sm-9">
+                    <input type="number" class="form-control" id="busFees" required [(ngModel)]="expense.busFees"
+                      name="busFees">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">year</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="year" required [(ngModel)]="expense.year"
+                      name="year">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">speciality Type</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" [(ngModel)]="expense.specialityType" name="specialityType">
+                      <option value="عربي">عربي</option>
+                      <option value="لغات">لغات</option>
+                      <option value="أزهرية">أزهرية</option>
+                      <option value="إسلامية">إسلامية</option>
+                      <option value="راهبات">راهبات</option>
+                      <option value="ثانوية فندقية">ثانوية فندقية</option>
+                      <option value="دولية">دولية</option>
+                      <option value="بريطانية">بريطانية</option>
+                      <option value="أمريكية">أمريكية</option>
+                      <option value="ألمانية">ألمانية</option>
+                      <option value="البكالوريا الدولية">البكالوريا الدولية</option>
+                      <option value="تركية">تركية</option>
+                      <option value="سودانية">سودانية</option>
+                      <option value="ليبية">ليبية</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Grade</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" [(ngModel)]="expense.grade" name="grade">
+                      <option value="المرحلة التمهيدية للمدرسة">المرحلة التمهيدية للمدرسة</option>
+                      <option value="المرحلة الثانوية">المرحلة الثانوية</option>
+                      <option value="المرحلة الاعدادية">المرحلة الاعدادية</option>
+                      <option value="المرحلة الابتدائية">المرحلة الابتدائية</option>
+                      <option value="حضانة">حضانة</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Comment Link Facebook</label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control" id="commentLinkFacebook" required [(ngModel)]="expense.commentLinkFacebook"
+                      name="commentLinkFacebook">
+                  </div>
+                </div>
+              </div>
+
+              <button [disabled]="!heroForm.form.valid" type="submit" class="btn btn-success mr-2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

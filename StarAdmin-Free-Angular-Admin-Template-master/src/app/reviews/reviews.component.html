@@ -1,0 +1,132 @@
+<div class="row">
+  <div class="col-md-12 d-flex align-items-stretch grid-margin">
+    <div class="row flex-grow">
+
+      <div class="col-12 stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Post Review</h4>
+
+            <form class="forms-sample" (ngSubmit)="onSubmit()" #heroForm="ngForm">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Title</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="title" required [(ngModel)]="review.title" name="title">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Rating</label>
+                  <div class="col-sm-9">
+                    <input type="number" class="form-control" id="rating" required [(ngModel)]="review.rating"
+                      name="rating">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">User Type</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" [(ngModel)]="review.userType" name="userType">
+                      <option value="طالب">طالب</option>
+                      <option value="ولي امر">ولي امر</option>
+                      <option value="مدرس">مدرس</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">About</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" [(ngModel)]="review.about" name="about">
+                      <option value="المدرسة">المدرسة</option>
+                      <option value="المدرسين">المدرسين</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">speciality Type</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" [(ngModel)]="review.specialityType" name="specialityType">
+                      <option value="عربي">عربي</option>
+                      <option value="لغات">لغات</option>
+                      <option value="أزهرية">أزهرية</option>
+                      <option value="إسلامية">إسلامية</option>
+                      <option value="راهبات">راهبات</option>
+                      <option value="ثانوية فندقية">ثانوية فندقية</option>
+                      <option value="دولية">دولية</option>
+                      <option value="بريطانية">بريطانية</option>
+                      <option value="أمريكية">أمريكية</option>
+                      <option value="ألمانية">ألمانية</option>
+                      <option value="البكالوريا الدولية">البكالوريا الدولية</option>
+                      <option value="تركية">تركية</option>
+                      <option value="سودانية">سودانية</option>
+                      <option value="ليبية">ليبية</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Grade</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" [(ngModel)]="review.grade" name="grade">
+                      <option value="المرحلة التمهيدية للمدرسة">المرحلة التمهيدية للمدرسة</option>
+                      <option value="المرحلة الثانوية">المرحلة الثانوية</option>
+                      <option value="المرحلة الاعدادية">المرحلة الاعدادية</option>
+                      <option value="المرحلة الابتدائية">المرحلة الابتدائية</option>
+                      <option value="حضانة">حضانة</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group ">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">pros</label>
+                  <div class="col-sm-12">
+                    <textarea   class="form-control" id="pros" required [(ngModel)]="review.pros"
+                      name="pros"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group ">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">cons</label>
+                  <div class="col-sm-12">
+                    <textarea   class="form-control" id="cons" required [(ngModel)]="review.cons"
+                      name="cons"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group ">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Management Advice</label>
+                  <div class="col-sm-12">
+                    <textarea   class="form-control" id="rating" required [(ngModel)]="review.managementAdvice"
+                      name="managementAdvice"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Comment Link Facebook</label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control" id="commentLinkFacebook" required [(ngModel)]="review.commentLinkFacebook"
+                      name="commentLinkFacebook">
+                  </div>
+                </div>
+              </div>
+
+              <button [disabled]="!heroForm.form.valid" type="submit" class="btn btn-success mr-2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
