@@ -23,7 +23,8 @@ export class ExpenseComponent implements OnInit {
     "year": "2020",
     "specialityType": "لغات",
     "id": "string",
-    "commentLinkFacebook":"https://www.facebook.com/Alexandria.Info/posts/2775575112496904?comment_id=2775739275813821"
+    "commentLinkFacebook":"https://www.facebook.com/Alexandria.Info/posts/2775575112496904?comment_id=2775739275813821",
+    "date" : new Date()
   };
   schoolId: any = '';
 

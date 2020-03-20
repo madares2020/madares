@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -32,6 +32,7 @@ import { DetailsComponent } from './Details/Details.component';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ExpenseComponent } from './Expense/Expense.component';
+import { IntereviewsComponent } from './Interviews/intereviews.component';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { ExpenseComponent } from './Expense/Expense.component';
     SchoolComponent,
     DetailsComponent,
     ReviewsComponent,
-    ExpenseComponent
+    ExpenseComponent,
+    IntereviewsComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +71,7 @@ import { ExpenseComponent } from './Expense/Expense.component';
     NgbModule,
     HttpClientModule,
     NgxJsonViewerModule,
-
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

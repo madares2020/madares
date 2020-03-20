@@ -29,6 +29,7 @@ export interface Review{
   schoolId: string;
   commentLinkFacebook: string;
   id: string;
+  date: Date;
 
 }
 export interface QuestionAnswer {
@@ -44,11 +45,8 @@ export interface Interview{
   questionAnswer: QuestionAnswer[];
   schoolId: string;
   id: string;
-  _rid: string;
-  _self: string;
-  _etag: string;
-  _attachments: string;
-  _ts: number;
+  commentLinkFacebook: string;
+  date: Date;
 }
 
 export interface Expense{
@@ -64,6 +62,7 @@ export interface Expense{
   specialityType: string;
   commentLinkFacebook: string;
   id: string;
+  date: Date;
 }
 export interface SchoolDetail{
   school: School;

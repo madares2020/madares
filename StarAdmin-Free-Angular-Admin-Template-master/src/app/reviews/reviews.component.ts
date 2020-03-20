@@ -23,7 +23,8 @@ export class ReviewsComponent implements OnInit {
     "managementAdvice": "استمروا",
     "schoolId": "227aa52a-9f60-494e-988e-e381ec704c88",
     "commentLinkFacebook": "https://www.facebook.com/Alexandria.Info/posts/2775575112496904?comment_id=2775739275813821",
-    "id": "string"
+    "id": "string",
+    "date": new Date()
   };
   schoolId: any = '';
 

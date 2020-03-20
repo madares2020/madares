@@ -127,6 +127,16 @@
                 </div>
               </div>
 
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Date</label>
+                  <div class="col-sm-12">
+                    <input type="date" class="form-control" id="date" required [(ngModel)]="expense.date"
+                      name="date">
+                  </div>
+                </div>
+              </div>
+
               <button [disabled]="!heroForm.form.valid" type="submit" class="btn btn-success mr-2">Submit</button>
             </form>
           </div>

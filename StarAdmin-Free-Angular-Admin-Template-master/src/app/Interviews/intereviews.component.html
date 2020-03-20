@@ -1,0 +1,129 @@
+<div class="container">
+  <div class="row">
+    <p>
+      Interviews
+    </p>
+    <form class="form-horizontal" [formGroup]="personalForm" (ngSubmit)="onSubmit()" style="min-width: 1000px;">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title"></h3>
+        </div>
+        <div class="panel-body">
+          <div class="col-md-12">
+            <div class="form-group row">
+              <label class="col-sm-2 control-label" for="firstName">title</label>
+              <div class="col-sm-8">
+                <input id="title" type="text" class="form-control" formControlName="title">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group row">
+              <label class="col-sm-2 control-label" for="firstName">process</label>
+              <div class="col-sm-8">
+                <textarea id="process" type="text" class="form-control" formControlName="process"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group row">
+              <label class="col-sm-2 control-label" for="firstName">date</label>
+              <div class="col-sm-8">
+                <input id="date" type="date" class="form-control" formControlName="date">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group row">
+              <label class="col-sm-2 control-label" for="email">specialityType</label>
+              <div class="col-sm-8">
+                <select class="form-control" formControlName="specialityType" name="specialityType">
+                  <option value="عربي">عربي</option>
+                  <option value="لغات">لغات</option>
+                  <option value="أزهرية">أزهرية</option>
+                  <option value="إسلامية">إسلامية</option>
+                  <option value="راهبات">راهبات</option>
+                  <option value="ثانوية فندقية">ثانوية فندقية</option>
+                  <option value="دولية">دولية</option>
+                  <option value="بريطانية">بريطانية</option>
+                  <option value="أمريكية">أمريكية</option>
+                  <option value="ألمانية">ألمانية</option>
+                  <option value="البكالوريا الدولية">البكالوريا الدولية</option>
+                  <option value="تركية">تركية</option>
+                  <option value="سودانية">سودانية</option>
+                  <option value="ليبية">ليبية</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group row">
+              <label class="col-sm-2 control-label" for="firstName">grade</label>
+              <div class="col-sm-8">
+                <select class="form-control" formControlName="grade" name="grade">
+                  <option value="المرحلة التمهيدية للمدرسة">المرحلة التمهيدية للمدرسة</option>
+                  <option value="المرحلة الثانوية">المرحلة الثانوية</option>
+                  <option value="المرحلة الاعدادية">المرحلة الاعدادية</option>
+                  <option value="المرحلة الابتدائية">المرحلة الابتدائية</option>
+                  <option value="حضانة">حضانة</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group row">
+              <label class="col-sm-2 control-label" for="firstName">comment Link Facebook</label>
+              <div class="col-sm-8">
+                <input id="commentLinkFacebook" type="text" class="form-control" formControlName="commentLinkFacebook">
+              </div>
+            </div>
+          </div>
+          <div style="background-color: gainsboro">
+            <div class="col-md-12">
+              <div class="form-group row">
+                <div class="col-md-offset-2 col-md-4">
+                  <button type="button" class="btn btn-primary" (click)="addSkillButtonClick()">
+                   (+) Add Another quetion and answer
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div formArrayName="questionAnswer" *ngFor="let other of formData.controls; let i = index" class="form-group row">
+                <div [formGroupName]="i">
+                  <div class="form-group" class="row cols-md-8">
+                    <label class="col-sm-2 control-label" for="education">
+                      Other
+                    </label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="question" placeholder="question"
+                        formControlName="question">
+                    </div>
+                    <div class="col-sm-10">
+                      <input type="text" placeholder="answer" class="form-control" formControlName="answer">
+                    </div>
+                  </div>
+                  <br>
+                  <div class="form-group" class="row cols-md-8">
+                    <label class="col-md-2 control-label">Type</label>
+                    <div class="col-md-4">
+                      <select class="form-control" formControlName="type" name="type">
+                        <option value="طالب">طالب</option>
+                        <option value="ولي امر">ولي امر</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="panel-footer">
+          <button [disabled]="!personalForm.valid" class="btn btn-primary" type="submit">Save</button>&nbsp;
+
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
