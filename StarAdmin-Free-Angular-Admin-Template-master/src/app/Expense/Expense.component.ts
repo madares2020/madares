@@ -37,7 +37,7 @@ export class ExpenseComponent implements OnInit {
   onSubmit() {
     localStorage.setItem('pass', this.pass);
     this.expense.schoolId = this.schoolId;
-    this.http.post<Expense>("https://madaremasr2020031407371.azurewebsites.net/api/Expense?pass=" + this.pass, this.expense).
+    this.http.post<Expense>("https://madares.azurewebsites.net/api/Expense?pass=" + this.pass, this.expense).
       subscribe(arg => {
         alert("success");
       });

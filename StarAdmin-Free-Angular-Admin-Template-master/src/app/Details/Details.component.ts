@@ -20,7 +20,7 @@ export class DetailsComponent implements OnInit {
     debugger
   this.schoolId =   this.route.snapshot.paramMap.get('id1');
   this.pass =  localStorage.getItem('pass');
-  this.http.get<SchoolDetail>(`https://madaremasr2020031407371.azurewebsites.net//api/GetSchoolDetail?schoolId=${this.schoolId}&pass=${this.pass}`).subscribe(
+  this.http.get<SchoolDetail>(`https://madares.azurewebsites.net//api/GetSchoolDetail?schoolId=${this.schoolId}&pass=${this.pass}`).subscribe(
 (data: SchoolDetail) => this.schooldetail = data  );
 
    }

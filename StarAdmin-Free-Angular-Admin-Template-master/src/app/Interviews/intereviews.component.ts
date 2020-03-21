@@ -51,7 +51,7 @@ export class IntereviewsComponent implements OnInit {
     console.log(this.personalForm.value);
     localStorage.setItem('pass', this.pass);
 
-      this.http.post<Interview>("https://madaremasr2020031407371.azurewebsites.net/api/Interview?pass=" + this.pass, this.personalForm.value).
+      this.http.post<Interview>("https://madares.azurewebsites.net/api/Interview?pass=" + this.pass, this.personalForm.value).
         subscribe(arg => {
           alert("success");
         });

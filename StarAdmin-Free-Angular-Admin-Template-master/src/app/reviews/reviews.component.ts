@@ -37,7 +37,7 @@ export class ReviewsComponent implements OnInit {
   onSubmit() {
     localStorage.setItem('pass', this.pass);
     this.review.schoolId = this.schoolId;
-    this.http.post<Review>("https://madaremasr2020031407371.azurewebsites.net/api/Review?pass=" + this.pass, this.review).
+    this.http.post<Review>("https://madares.azurewebsites.net/api/Review?pass=" + this.pass, this.review).
       subscribe(arg => {
         alert("success");
       });

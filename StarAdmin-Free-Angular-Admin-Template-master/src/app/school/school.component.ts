@@ -23,7 +23,7 @@ export class SchoolComponent implements OnInit {
     debugger;
     localStorage.setItem('pass', this.pass);
 
-  this.http.get<School[]>("https://madaremasr2020031407371.azurewebsites.net/api/School?name=" + this.name + "&pass=" + this.pass).subscribe(
+  this.http.get<School[]>("https://madares.azurewebsites.net/api/School?name=" + this.name + "&pass=" + this.pass).subscribe(
 (data: School[]) => this.schools = data  );
 
    }
