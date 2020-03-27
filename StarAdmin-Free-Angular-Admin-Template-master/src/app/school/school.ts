@@ -14,7 +14,9 @@ export interface School {
   endTime: string;
   expense: string[];
   Quality?: any;
-
+  facilities: string[];
+  briefInfo: string[];
+  logoUrl: string;
 }
 export interface Review{
   userType: string;

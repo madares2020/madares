@@ -22,6 +22,7 @@ import { DetailsComponent } from './Details/Details.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ExpenseComponent } from './Expense/Expense.component';
 import { IntereviewsComponent } from './Interviews/intereviews.component';
+import { SchoolEditComponent } from './school/school-edit.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/Schools', pathMatch: 'full' },
@@ -46,6 +47,8 @@ const routes: Routes = [
   {path: 'Reviews/:id1', component: ReviewsComponent},
   {path: 'Expenses/:id1', component: ExpenseComponent},
   {path: 'Interviews/:id1', component: IntereviewsComponent},
+  {path: 'Schools/Edit/:id1', component: SchoolEditComponent},
+  //
 
 ];
 

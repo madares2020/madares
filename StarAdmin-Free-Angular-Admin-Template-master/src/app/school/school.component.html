@@ -5,7 +5,9 @@
       <div class="col-12 stretch-card">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Search School</h4>
+            <h4 class="card-title">Search School
+              | <a href="/Schools/Edit/0">Add School</a>|
+            </h4>
 
             <form class="forms-sample" (ngSubmit)="onSubmit()" #heroForm="ngForm">
               <div class="form-group row">
@@ -89,7 +91,8 @@
                      <a href="/Schools/{{school.id}}">Details</a>|
                      <a href="/Reviews/{{school.id}}">Reviews</a>|
                      <a href="/Expenses/{{school.id}}">Expenses</a>|
-                     <a href="/Interviews/{{school.id}}/">Interviews</a>
+                     <a href="/Interviews/{{school.id}}/">Interviews</a>|
+                     <a href="/Schools/Edit/{{school.id}}">Edit</a>|
                    </td>
                 </tr>
 

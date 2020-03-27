@@ -1,0 +1,248 @@
+<div class="row">
+  <div class="col-md-12 d-flex align-items-stretch grid-margin">
+    <div class="row flex-grow">
+
+      <div class="col-12 stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Post School</h4>
+
+            <form class="forms-sample" (ngSubmit)="onSubmit()" #heroForm="ngForm">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Name</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="name" required [(ngModel)]="school.name" name="name">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Region</label>
+                  <div class="col-sm-9">
+                    <select class="form-control"   [(ngModel)]="school.region" name="region">
+                      <option class="generated" value="مدينة نصر">مدينة نصر</option>
+                      <option class="generated" value="وسط البلد">وسط البلد</option>
+                      <option class="generated" value="المنيل">المنيل</option>
+                      <option class="generated" value="جاردن سيتي">جاردن سيتي</option>
+                      <option class="generated" value="قصر العيني">قصر العيني</option>
+                      <option class="generated" value="العباسية">العباسية</option>
+                      <option class="generated" value="مصر الجديدة">مصر الجديدة</option>
+                      <option class="generated" value="المقطم">المقطم</option>
+                      <option class="generated" value="المعادي">المعادي</option>
+                      <option class="generated" value="حدائق القبة">حدائق القبة</option>
+                      <option class="generated" value="شيراتون">شيراتون</option>
+                      <option class="generated" value="القاهرة الجديدة">القاهرة الجديدة</option>
+                      <option class="generated" value="الجمالية">الجمالية</option>
+                      <option class="generated" value="جسر السويس">جسر السويس</option>
+                      <option class="generated" value="السيدة زينب">السيدة زينب</option>
+                      <option class="generated" value="طريق القاهرة الإسماعيلية الصحراوي">طريق القاهرة الإسماعيلية الصحراوي</option>
+                      <option class="generated" value="مدينة الشروق">مدينة الشروق</option>
+                      <option class="generated" value="مدينة الرحاب">مدينة الرحاب</option>
+                      <option class="generated" value="المرج">المرج</option>
+                      <option class="generated" value="مدينتي">مدينتي</option>
+                      <option class="generated" value="شبرا">شبرا</option>
+                      <option class="generated" value="عين شمس">عين شمس</option>
+                      <option class="generated" value="عزبة النخل">عزبة النخل</option>
+                      <option class="generated" value="المطرية">المطرية</option>
+                      <option class="generated" value="مدينة بدر">مدينة بدر</option>
+                      <option class="generated" value="حلوان">حلوان</option>
+                      <option class="generated" value="الخليفة">الخليفة</option>
+                      <option class="generated" value="القطامية">القطامية</option>
+                      <option class="generated" value="الوايلي">الوايلي</option>
+                      <option class="generated" value="الزيتون">الزيتون</option>
+                      <option class="generated" value="الشرابية">الشرابية</option>
+                      <option class="generated" value="المنيرة">المنيرة</option>
+                      <option class="generated" value="البساتين">البساتين</option>
+                      <option class="generated" value="دار السلام">دار السلام</option>
+                      <option class="generated" value="النزهة">النزهة</option>
+                      <option class="generated" value="الساحل">الساحل</option>
+                      <option class="generated" value="الزاوية الحمراء">الزاوية الحمراء</option>
+                      <option class="generated" value="مدينة السلام">مدينة السلام</option>
+                      <option class="generated" value="مصر القديمة">مصر القديمة</option>
+                      <option class="generated" value="باب الشعرية">باب الشعرية</option>
+                      <option class="generated" value="الظاهر">الظاهر</option>
+                      <option class="generated" value="بولاق">بولاق</option>
+                      <option class="generated" value="العتبة">العتبة</option>
+                      <option class="generated" value="الزمالك">الزمالك</option>
+                      <option class="generated" value="المعصرة">المعصرة</option>
+                      <option class="generated" value="باب اللوق">باب اللوق</option>
+                      <option class="generated" value="طريق مصر الإسكندرية الصحراوي">طريق مصر الإسكندرية الصحراوي</option>
+                      <option class="generated" value="طريق مصر الإسماعيلية الصحراوي">طريق مصر الإسماعيلية الصحراوي</option>
+                      <option class="generated" value="مدينة 15 مايو">مدينة 15 مايو</option>
+                      <option class="generated" value="الدرب الأحمر">الدرب الأحمر</option>
+                      <option class="generated" value="العاصمة الإدارية الجديدة">العاصمة الإدارية الجديدة</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">City</label>
+                  <div class="col-sm-9">
+                    <select class="form-control"   [(ngModel)]="school.city" name="city">
+                      <option value="القاهرة">القاهرة</option>
+                      <option value="الجيزة">الجيزة</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Address</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="address" required [(ngModel)]="school.address"
+                      name="address">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">LandLine</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="landLine" required [(ngModel)]="school.landLine"
+                      name="landLine">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Mobile</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="mobile" required [(ngModel)]="school.mobile"
+                      name="mobile">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Website</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="website" required [(ngModel)]="school.website"
+                      name="website">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Email</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="email" required [(ngModel)]="school.email"
+                      name="email">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">founded</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="founded" required [(ngModel)]="school.founded"
+                      name="founded">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">speciality Type</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" multiple="multiple" [(ngModel)]="school.classification" name="specialityType">
+                      <option value="عربي">عربي</option>
+                      <option value="لغات">لغات</option>
+                      <option value="أزهرية">أزهرية</option>
+                      <option value="إسلامية">إسلامية</option>
+                      <option value="راهبات">راهبات</option>
+                      <option value="ثانوية فندقية">ثانوية فندقية</option>
+                      <option value="دولية">دولية</option>
+                      <option value="بريطانية">بريطانية</option>
+                      <option value="أمريكية">أمريكية</option>
+                      <option value="ألمانية">ألمانية</option>
+                      <option value="البكالوريا الدولية">البكالوريا الدولية</option>
+                      <option value="تركية">تركية</option>
+                      <option value="سودانية">سودانية</option>
+                      <option value="ليبية">ليبية</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">facilities</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" multiple="multiple" [(ngModel)]="school.facilities" name="facilities">
+                      <option value="حمامات سباحه">حمامات سباحه</option>
+                      <option value="أوليمبي">أوليمبي</option>
+                      <option value="انشطه فنيه">انشطه فنيه</option>
+                      <option value="انشطه رياضيه">انشطه رياضيه</option>
+                      <option value="انشطه موسيقيه">انشطه موسيقيه</option>
+                      <option value="مسرح">مسرح</option>
+                      <option value="رياضة بدنية">رياضة بدنية</option>
+                      <option value="أتوبيس">أتوبيس</option>
+                      <option value="انشطه علميه">انشطه علميه</option>
+                      <option value="معسكرات">معسكرات</option>
+                      <option value="الحدائق">الحدائق</option>
+                      <option value="استاد">استاد</option>
+                      <option value="مشاركة رياضيه">مشاركة رياضيه</option>
+                      <option value="الطلاب الدوليين">الطلاب الدوليين</option>
+                      <option value="المعلمين الأجانب">المعلمين الأجانب</option>
+                      <option value="مكتبة">مكتبة</option>
+                      <option value="دروس دينيه">دروس دينيه</option>
+                      <option value="عيادة طبية">عيادة طبية</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="form-group ">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">start Time</label>
+                  <div class="col-sm-12">
+                    <input type="text"   class="form-control" id="startTime" required [(ngModel)]="school.startTime"
+                      name="startTime" >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group ">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">end Time</label>
+                  <div class="col-sm-12">
+                    <input type="text"   class="form-control" id="endTime" required [(ngModel)]="school.endTime"
+                      name="endTime" >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group ">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">expense</label>
+                  <div class="col-sm-12">
+                    <textarea   class="form-control" id="expense" required [(ngModel)]="school.expense"
+                      name="expense"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group ">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Quality</label>
+                  <div class="col-sm-12">
+                    <textarea   class="form-control" id="Quality" required [(ngModel)]="school.Quality"
+                      name="Quality"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="form-group ">
+                  <label for="exampleInputEmail2" class="col-sm-3 col-form-label">briefInfo</label>
+                  <div class="col-sm-12">
+                    <textarea   class="form-control" id="briefInfo" required [(ngModel)]="school.briefInfo"
+                      name="briefInfo"></textarea>
+                  </div>
+                </div>
+              </div>
+              <button [disabled]="!heroForm.form.valid" type="submit" class="btn btn-success mr-2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

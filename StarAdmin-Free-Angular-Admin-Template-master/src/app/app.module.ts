@@ -33,6 +33,8 @@ import { NgxJsonViewerModule } from 'ngx-json-viewer';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ExpenseComponent } from './Expense/Expense.component';
 import { IntereviewsComponent } from './Interviews/intereviews.component';
+import { SchoolEditComponent } from './school/school-edit.component';
+import { NgxElasticlunrModule } from 'ngx-elasticlunr';
 
 
 @NgModule({
@@ -61,7 +63,8 @@ import { IntereviewsComponent } from './Interviews/intereviews.component';
     DetailsComponent,
     ReviewsComponent,
     ExpenseComponent,
-    IntereviewsComponent
+    IntereviewsComponent,
+    SchoolEditComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +74,9 @@ import { IntereviewsComponent } from './Interviews/intereviews.component';
     NgbModule,
     HttpClientModule,
     NgxJsonViewerModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxElasticlunrModule.forRoot()
+
   ],
   providers: [],
   bootstrap: [AppComponent]
